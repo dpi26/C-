@@ -6,10 +6,11 @@ public:
         int num=x;
         while(num>0){
             int digit=num%10;
-            if (sum > (INT_MAX - digit) / 10) return false;
+            if (sum > (__INT_MAX__ - digit) / 10) return false;
             sum=(sum*10) + digit;
             num/=10;
         }
         return sum==x;
     }
 };
+
